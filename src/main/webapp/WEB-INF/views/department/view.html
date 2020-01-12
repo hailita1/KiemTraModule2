@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Department</title>
+</head>
+<body>
+<h1>View department: <span th:text="${department.name}"></span></h1>
+<a href="/departments">Department list</a>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <th:block th:each="employee : ${employees}">
+        <tr>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.address}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
