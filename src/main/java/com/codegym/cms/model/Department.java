@@ -10,8 +10,9 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     String name;
-@OneToMany(targetEntity = Employee.class)
-private List<Employee> employees;
+    @OneToMany(targetEntity = Employee.class)
+    private List<Employee> employees;
+
     public Department() {
     }
 
@@ -34,10 +35,12 @@ private List<Employee> employees;
     public void setName(String name) {
         this.name = name;
     }
-    public List<Employee> getEmployees(){
+
+    public List<Employee> getEmployees() {
         return employees;
     }
-    public void setEmployees(List<Employee> employees){
+
+    public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 }

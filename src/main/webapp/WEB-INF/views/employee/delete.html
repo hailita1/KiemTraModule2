@@ -22,6 +22,14 @@
             <td th:text="${employee.address}"></td>
         </tr>
         <tr>
+            <td>Avatar:</td>
+            <td><img width="150px" height="150px" th:src="@{'/i/' + ${employee.avatar}}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="file" th:field="*{avatar}"></td>
+        </tr>
+        <tr>
             <td>Birth Date:</td>
             <td th:text="${employee.birthDate}"></td>
         </tr>
