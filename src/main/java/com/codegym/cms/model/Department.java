@@ -9,7 +9,7 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    String name;
+    private String name;
     @OneToMany(targetEntity = Employee.class)
     private List<Employee> employees;
 

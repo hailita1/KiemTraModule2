@@ -42,5 +42,6 @@
     <span th:text="${employee.number + 1}"></span>/<span th:text="${employee.totalPages}"></span>
     <a th:href="@{'/employees'(page=${employee.number + 1})}" th:if="${employee.hasNext()}">Tiếp</a>
 </div>
+<h1 th:text="${'View count: ' + mycounter.getCount()}"></h1>
 </body>
 </html>
